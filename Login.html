@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Form</title>
+</head>
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="Loginvalidation.js" type="text/javascript"></script>
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: url(frame.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    input[type=text],
+    input[type=password] {
+
+        padding: 10px 10px;
+        border-radius: 5px;
+        margin: 2px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        width: 80%;
+        /*
+        padding: 10px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box; */
+    }
+
+    .button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        margin: 30px 20px;
+        border: none;
+        cursor: pointer;
+        width: 50%;
+        border-radius: 12px;
+    }
+
+    .forgot {
+        padding: 10px;
+        margin: 10px 5px 10px 10px;
+        width: 80%;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    #logindetails {
+
+        margin-left: auto;
+        margin-right: auto;
+        padding: 40px;
+        text-align: center;
+        width: 700px;
+        height: 400px;
+    }
+
+    #Login {
+        align-content: center;
+        margin: 200px 690px;
+    }
+
+    b {
+        color: white;
+    }
+
+    a {
+        color: tomato;
+    }
+
+    td {
+        width: 140px;
+        padding: 5px;
+    }
+</style>
+
+</html>
+</head>
+
+<body>
+    <div id="Login">
+        <form id="login_form">
+            <table id="logindetails">
+                <tr>
+                    <td colspan="2">
+                        <center>
+                            <font size="5"
+                                style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+                                <b>
+                                    Login Page</b>
+                            </font>
+                        </center>
+                    </td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td>
+                        <label for="UserName">
+                            <b>Username</b>
+                        </label>
+                    </td>
+                    <td><input autocomplete="off" id="Uname" placeholder="Enter UserName" type="text" maxlength="10"
+                            title="only characters and number" />
+                    </td>
+                    <td>
+                        <span id="usererror" style="color:red"></span>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">
+                            <b>Password</b>
+                        </label>
+                    </td>
+                    <td>
+                        <input class="form-control" id="pswd" name="password" type="password"
+                            placeholder="Enter Password" maxlength="10"
+                            title="Password should contain Uperrcase,lowercase,specialcharacter"></td>
+                    <td>
+                        <span id="passworderror" style="color:red"></span>
+                        <span id="password_strength" style="color:red"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p class="forgot">
+                            <a href="Forgetpassword.html">Forgot Password?</a</p> </p> </td> <td>
+                                <input type="button" class="button" id="loginbutton" value="Log In" />
+
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <br>
+    </div>
+</body>
+
+</html>

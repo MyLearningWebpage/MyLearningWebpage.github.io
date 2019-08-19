@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Details Page</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <script src="https://code.jquery.com/jquery-3.4.1.js" type="text/javascript"></script>
+
+</head>
+<style>
+  #outline {
+    border: 1px solid black;
+    margin: 180px 690px;
+    padding: 5px;
+    text-align: center;
+    width: 500px;
+    height: 300px;
+    border: collapse;
+  }
+
+  table {
+    width: 100%;
+    font: 19px corbert;
+  }
+
+  table,
+  th,
+  td {
+    border: 1px;
+    border-collapse: collapse;
+    padding: 2px 3px;
+    text-align: center;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(content2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+  }
+</style>
+<script>
+  $(function () {
+
+    var newname = GetParameterValues('name');
+    var newdesig = GetParameterValues('desig');
+    var newemail = GetParameterValues('email');
+    var newcontact = GetParameterValues('contact');
+
+
+
+    function GetParameterValues(param) {
+      var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+      for (var i = 0; i < url.length; i++) {
+        var urlparam = url[i].split('=');
+        if (urlparam[0] == param) {
+          return urlparam[1];
+        }
+      }
+
+    }
+
+    var content = "<table>"
+    content += '<tr><td>' + 'Name ' + '</td><td>' + newname + '</td></tr>' + '<tr><td>' + 'Designation ' +
+      '</td><td>' + newdesig + '</td></tr>' + '<tr><td>' + 'Email ' +
+      '</td><td>' + newemail + '</td></tr>' + '<tr><td>' + 'Contact ' +
+      '</td><td>' + newcontact + '</td></tr>';
+
+
+    content += "</table>"
+
+    $('#content').append(content);
+  });
+</script>
+
+<body>
+
+  <div id="outline">
+    <h3 align="Center">Please find your details below</h1>
+      <br>
+      <div id="content"></div>
+
+
+  </div>
+</body>
+
+</html>
